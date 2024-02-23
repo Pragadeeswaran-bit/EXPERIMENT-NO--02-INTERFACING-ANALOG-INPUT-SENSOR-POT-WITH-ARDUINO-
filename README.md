@@ -1,6 +1,8 @@
- INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-
-
-
+![image](https://github.com/Pragadeeswaran-bit/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/147473828/fd554883-78b7-4d67-a8b1-e0947d7da330) INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-
+### Name:Pragadeeswaran L
+### Roll.no:212223240120
+### Department:AIML
+### Date:23/02/2024
 
 
 **AIM**:  To interface a Analog  input (angular displacement sensor POT) and scale the values up on change in the input.
@@ -67,7 +69,44 @@ CIRCUIT DIAGRAM
 
 
 **PROGRAM** 
- 
+ ```
+int pot;
+int led=7;
+void setup()
+{
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  pot=analogRead(A0);
+  Serial.print("Value=");
+  Serial.println(pot);
+  
+  if(pot>900){
+  digitalWrite(led,HIGH);
+  delay(500);
+  digitalWrite(led,LOW);
+  delay(500);
+  }else{
+    digitalWrite(led,LOW);
+    delay(500);
+  }
+}
+```
+**Circuit diagram:** 
+ON CONDITION:
+![Screenshot 2024-02-23 155129](https://github.com/Pragadeeswaran-bit/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/147473828/15dcc523-7d4e-48f5-b8d2-a21c9932a40a)
+
+OFF CONDITION:
+![image](https://github.com/Pragadeeswaran-bit/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/147473828/3b8c2ac2-d223-4cb8-a344-a4c1d317b5e0)
+
+GRAPH DIAGRAM:
+![image](https://github.com/Pragadeeswaran-bit/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/147473828/6631bce8-b8e8-4ab8-9889-0cecbefdc9b1)
+
+
+
 
 
 
@@ -80,6 +119,8 @@ CIRCUIT DIAGRAM
 **
 **Simulation output:** 
 **
+![image](https://github.com/Pragadeeswaran-bit/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/147473828/3ef6fcf9-2cb1-41d4-abcd-38c8416573d4)
+
 
 
 [My image](username.github.com/repository/img/image.jpg)
